@@ -52,7 +52,7 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 currentLocation = room['outside']
-character = Player(currentLocation)
+character = Player("Noah", currentLocation)
 
 # Write a loop that:
 #
@@ -76,7 +76,7 @@ print('Once an item is in your inventory, typing (ins)pect will read you its des
 print('When you are done exploring, type q to exit.')
 while(playing):
     print(f"\n{character}")
-    request = input("What would you like to do?\n\n").lower().split(' ')
+    request = input("What would you likes to do?\n\n").lower().split(' ')
 
     if len(request) == 1:
         if request[0] == 'q' or request[0] == 'quit':

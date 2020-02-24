@@ -2,7 +2,8 @@
 # currently.
 
 class Player:
-    def __init__(self, location):
+    def __init__(self, name, location):
+        self.name = name
         self.location = location
         self.inventory = []
 
@@ -50,4 +51,4 @@ class Player:
         return "Current Location: {}".format(self.location)
     
     def __str__(self):
-        return "Current Location: {}".format(self.location)
+        return f'{self.name} is in the {self.location} room'
